@@ -38,26 +38,3 @@ public class PilotServiceImpl implements PilotService {
 		ProfilePilot.setFlyHour(pilot.getFlyHour());
 	}
 }
-
-//	@Override
-//	public PilotModel getPilotDetailByLicenseNumber (String licenseNumber) {
-//		PilotModel result = null;
-//		
-//		for (int i=0; i < pilotDb.length();i++) {
-//			if (pilotDb.get(i).getLicenseNumber().equals(licenseNumber)) {
-//				result = pilotDb.get(i).get;
-//			}
-//		}
-//	}
-
-//@Override
-//public PilotModel getPilotDetailByLicenseNumber(String licenseNumber) {
-//	PilotModel result = null;
-//	
-//	for (int i=0; i < archivePilot.size(); i++) {
-//		if (archivePilot.get(i).getLicenseNumber().equals(licenseNumber)) {
-//			result = archivePilot.get(i);
-//		}
-//	}
-//	return result;
-//}

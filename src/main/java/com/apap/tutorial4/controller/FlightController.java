@@ -68,18 +68,3 @@ public class FlightController {
 	}
 	
 }
-
-
-//@RequestMapping("/flight/view")
-//private String viewFlight(@RequestParam("flightNumber") String flightNumber, Model model){
-//    List<FlightModel> allFlights = flightService.getFlightList();
-//    ArrayList<FlightModel> flights = new ArrayList<FlightModel>() {
-//    };
-//    for (FlightModel flight : allFlights) {
-//        if(flight.getFlightNumber().equals(flightNumber))
-//            flights.add(flight);
-//    }
-//    model.addAttribute("flights",flights);
-//
-//    return "view-flight";
-//}

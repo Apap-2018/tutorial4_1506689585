@@ -62,22 +62,3 @@ public class PilotController {
 		return "add";
 	}
 }
-
-//
-//@RequestMapping("pilot/view/license-number/{lcsNumber}")
-//public String pilotPage(@PathVariable String lcsNumber, Model model) {
-//	PilotModel viewPilot = pilotService.getPilotDetailByLicenseNumber(lcsNumber);
-//	
-//	if (viewPilot == null) {
-//		return "view-error";
-//	} else {
-//		model.addAttribute("pilot", viewPilot);
-//		return "view-profile";
-//	}
-//}
-//
-//@RequestMapping("/challenge")
-//public String challenge(@RequestParam(value = "name") String name, Model model) {
-//	model.addAttribute("name",name);
-//	return "challenge";
-//}

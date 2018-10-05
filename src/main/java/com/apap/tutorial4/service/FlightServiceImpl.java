@@ -43,13 +43,3 @@ public class FlightServiceImpl implements FlightService {
 		allFlight.setTime(flights.getTime());
 	}
 }
-
-//@Override
-//public List<FlightModel> getFlights() {
-//  return flightDb.findAll();
-//}
-
-//@Override
-//public FlightModel getFlightDetailByLicenseNumber(String licenseNumber) {
-//	return flightDb.findByLicenseNumber(licenseNumber);
-//}
