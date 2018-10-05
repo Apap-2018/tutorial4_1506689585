@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Pilot Profile</title>
+</head>
+
+	<h2>Pilot Profile</h2>
+<body>
+	<h3 th:text=" 'Pilot License Number : ' + ${pilot.licenseNumber}"></h3>
+	<h3 th:text=" 'Name : ' + ${pilot.name}"></h3>
+	<h3 th:text="'Fly Hour : ' + ${pilot.flyHour}"></h3>
+	
+	<table border="1" style="width:600px">
+	<tr>
+		<td th:text="'Flight Number'" />
+		<td th:text="'Origin'" />
+		<td th:text="'Destination'" />
+		<td th:text="'Time'" />
+		<td th:text="'Delete'" />
+		<td th:text="'Update'" />
+	</tr>
+	<tr th:each=" flight : ${pilot.pilotFlight}">
+		<td th:text=" ${flight.flightNumber}" />
+		<td th:text=" ${flight.origin}" />
+		<td th:text=" ${flight.destination}" />
+		<td th:text=" ${flight.time}" />
+		<td><a th:href="@{'/flight/delete/' + ${flight.flightNumber}}">Delete Flight</a></td>
+		<td><a th:href="@{'/flight/update/' + ${flight.flightNumber}}">Update Flight</a></td>
+		<br>
+	</tr>
+	</table>
+	<br>
+	
+	<td><a th:href="@{'/flight/add/' + ${pilot.licenseNumber}}">Add Flight</a></td>
+	
+	<td><a th:href="@{'/pilot/delete/' + ${pilot.licenseNumber}}">Delete Pilot</a></td>
+	<td><a th:href="@{'/pilot/update/' + ${pilot.licenseNumber}}">Update Pilot</a></td>
+</body>
+</html>
