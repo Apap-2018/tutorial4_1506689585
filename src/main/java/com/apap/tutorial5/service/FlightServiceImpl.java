@@ -1,4 +1,4 @@
-package com.apap.tutorial4.service;
+package com.apap.tutorial5.service;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.apap.tutorial4.model.FlightModel;
-import com.apap.tutorial4.model.PilotModel;
-import com.apap.tutorial4.repository.FlightDb;
+import com.apap.tutorial5.model.FlightModel;
+import com.apap.tutorial5.model.PilotModel;
+import com.apap.tutorial5.repository.FlightDb;
 
 @Service
 @Transactional
@@ -41,5 +41,11 @@ public class FlightServiceImpl implements FlightService {
 		allFlight.setOrigin(flights.getOrigin());
 		allFlight.setDestination(flights.getDestination());
 		allFlight.setTime(flights.getTime());
+	}
+
+	@Override
+	public void deleteFlightById(long id) {
+		// TODO Auto-generated method stub
+		flightDb.deleteById(id);
 	}
 }
